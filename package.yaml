@@ -14,23 +14,13 @@ library:
   - App
   dependencies:
   - base >=4.7 && <5
-  - aeson
-  - aeson-casing
-  - servant-server
   - text
   - monad-logger
   - transformers
-  - wai-logger
-  - HsOpenSSL
-  - time ==1.6.0.1
-  - wreq
-  - http-client
-  - http-client-tls
   - lens
-  - lens-aeson
-  - http-client-openssl
-  - HDBC
-  - HTTP
+  - gogol
+  - gogol-core
+  - gogol-compute
 executables:
   rbac-exe:
     main: Main.hs
@@ -42,12 +32,7 @@ executables:
     dependencies:
     - base
     - rbac
-    - wai-logger
-    - servant-server
-    - servant
-    - wai
     - text
-    - warp
 tests:
   rbac-test:
     main: Spec.hs
@@ -61,10 +46,6 @@ tests:
     - rbac
     - hspec
     - hspec-discover
-    - hspec-wai
-    - hspec-wai-json
-    - aeson
-    - http-types
     - bytestring
     - QuickCheck
     - quickcheck-text
